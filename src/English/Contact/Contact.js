@@ -56,16 +56,17 @@ export default function Contact() {
             <div style={container}>
                 <div style={textContainer}>
                     <div style={textCaptionStyle}>
-                        住所
+                        Address
                     </div>
                     <div style={textStyle}>
-                        大阪府茨木市美穂ヶ丘8-1 大阪大学 産業科学研究所 F-588
+                        #F-588, Department of Intelligent Media, SANKEN, Osaka University
+                        8-1 Mihogaoka, Ibaraki, Osaka, 567-0047, Japan
                     </div>
                     <div style={textCaptionStyle}>
-                        電話番号
+                        Telephone
                     </div>
                     <div style={textStyle}>
-                        06-6879-8422
+                        +81-6-6879-8422
                     </div>
                     <div style={textCaptionStyle}>
                         E-mail
@@ -80,4 +81,3 @@ export default function Contact() {
         </div>
     );
 }
-
