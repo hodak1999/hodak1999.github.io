@@ -1,4 +1,4 @@
-import React, {useCallback, useMemo, useState} from 'react'
+import {useCallback, useMemo, useState} from 'react'
 
 export const useFadeInOut = (durationSec,init) => {
     const [display, setDisplay] = useState(init)
@@ -32,4 +32,9 @@ export const useFadeInOut = (durationSec,init) => {
     }, [durationSec, display])
 
     return {display, handleOpen, handleClose, toggleDisplay, boxStyle}
+}
+
+export const useFadeInOutList = (d) => {
+    const {toggleDisplay, boxStyle, handleClose, handleOpen} = useFadeInOut(1, d === 0);
+    return {toggleDisplay: toggleDisplay, boxStyle: boxStyle, handleClose: handleClose, handleOpen: handleOpen}
 }

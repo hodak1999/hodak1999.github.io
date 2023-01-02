@@ -11,14 +11,14 @@ import LanguageProvider from './Providers/LanguageProvider';
 const root = createRoot(document.getElementById('root')); // createRoot(container!) if you use TypeScript
 root.render(
     <BrowserRouter>
-        <BeginningProvider>
-            <LanguageProvider>
-                <DrawerProvider>
-                    <DisplayProvider>
+        <DisplayProvider>
+            <BeginningProvider>
+                <LanguageProvider>
+                    <DrawerProvider>
                         <App/>
-                    </DisplayProvider>
-                </DrawerProvider>
-            </LanguageProvider>
-        </BeginningProvider>
+                    </DrawerProvider>
+                </LanguageProvider>
+            </BeginningProvider>
+        </DisplayProvider>
     </BrowserRouter>,
 );

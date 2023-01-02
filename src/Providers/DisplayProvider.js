@@ -1,18 +1,15 @@
 import React, {createContext, useState, useContext} from "react";
-import {useFadeInOut} from "./useFadeInOut";
+import {useFadeInOutList} from './useFadeInOut';
 
 const screens = 4
 
-const ScrollDisplayContext = createContext();
+const ScrollDisplayContext = createContext(undefined);
 export const useScrollDisplay = () => useContext(ScrollDisplayContext);
 
 export default function DisplayProvider({children}) {
     const [displayState, setDisplayState] = useState(0);
     const [prevDisplayState, setPrevDisplayState] = useState(-1);
-    const display = [...Array(screens).keys()].map((d) => {
-        const {toggleDisplay, boxStyle, handleClose, handleOpen} = useFadeInOut(1, d === 0);
-        return {toggleDisplay: toggleDisplay, boxStyle: boxStyle, handleClose: handleClose, handleOpen: handleOpen}
-    });
+    const display = [...Array(screens).keys()].map(useFadeInOutList);
     const [prevTime, setPrevTime] = useState(0);
     const [prevY, setPrevY] = useState(-1);
 
