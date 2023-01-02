@@ -12,6 +12,10 @@ export default function Beginning({setColor}) {
     const trail = useTrail(text.length, {
         opacity: active ? 1 : 0,
         y: active ? 0 : -100,
+        config:{
+            tension: 210,
+            friction: 20
+        },
         from: {opacity: 0, y: -100},
     });
     useEffect(() => {
