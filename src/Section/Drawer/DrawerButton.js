@@ -14,7 +14,7 @@ export default function DrawerButton() {
                 marginLeft:'5vw',
                 alignItems:'center',
             }} onClick={toggleDrawer()}>
-                <DrawerLines/>
+                <DrawerLines size={ButtonSizeGenerator()}/>
             </div>
     )
 }

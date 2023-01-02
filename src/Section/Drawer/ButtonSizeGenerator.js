@@ -4,9 +4,9 @@ import {useWindowDimensions} from '../../Providers/WindowSizeProvider';
 export function ButtonSizeGenerator() {
     const {width} = useWindowDimensions();
     if (width < 900) {
-        return '15px';
+        return '15';
     } else {
-        return '25px';
+        return '25';
     }
 }
 

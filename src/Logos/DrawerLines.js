@@ -1,7 +1,7 @@
 import React from "react";
 
-const DrawerLines = props => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.11 17.77" width="100%"
-                            height="100%" {...props}>
+const DrawerLines = ({size}) => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.11 17.77" width={size}
+                            height={size}>
     <defs>
         <style>{".cls-1{fill:none;stroke:#25274f;stroke-miterlimit:10;}"}</style>
     </defs>
