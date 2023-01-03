@@ -1,6 +1,7 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
-import {FontCaptionSizeGenerator, FontSizeGenerator} from './FontSizeGenerator';
+import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
+
 
 export default function ResearchBackground() {
     const container = {

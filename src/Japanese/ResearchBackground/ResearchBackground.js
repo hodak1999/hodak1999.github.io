@@ -1,6 +1,7 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
-import {FontCaptionSizeGenerator, FontSizeGenerator} from './FontSizeGenerator';
+import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
+import MountainAnimation from './MountainAnimation';
 
 export default function ResearchBackground() {
     const container = {
@@ -71,6 +72,7 @@ export default function ResearchBackground() {
                     </div>
                 </div>
             </div>
+            <MountainAnimation></MountainAnimation>
         </div>
     );
 }

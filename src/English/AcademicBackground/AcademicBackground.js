@@ -1,6 +1,8 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
-import {FontSizeGenerator,FontCaptionSizeGenerator} from './FontSizeGenerator';
+import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
+import ConnectionCircles
+    from '../../Japanese/AcademicBackground/ConnectionCircles';
 
 export default function AcademicBackground() {
     const container = {
@@ -48,7 +50,7 @@ export default function AcademicBackground() {
                         Education
                     </div>
                     <div style={textStyle}>
-                        2011-4 : Enrollment in Osumi Junior High School<br/>
+                        2011-4 : Enrollment in Kyotanabe Municipal Osumi Junior High School, Kyoto Prefecture<br/>
                         2013-9 : Transfer to International School Eindhoven (Netherlands)<br/>
                         2015-4 : Enrollment in Sagano High School<br/>
                         2018-3 : Graduation from Kyoto Prefectural Sagano High School<br/>
@@ -58,6 +60,7 @@ export default function AcademicBackground() {
                     </div>
                 </div>
             </div>
+            <ConnectionCircles></ConnectionCircles>
         </div>
     );
 }

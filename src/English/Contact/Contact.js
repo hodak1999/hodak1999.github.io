@@ -1,6 +1,7 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
-import {FontSizeGenerator,FontCaptionSizeGenerator} from './FontSizeGenerator';
+import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
+
 import Atmark from '../../Logos/Atmark';
 
 export default function Contact() {

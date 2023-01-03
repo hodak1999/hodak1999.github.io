@@ -16,14 +16,15 @@ function App() {
     const {isJapanese} = useLanguage();
     const [color, setColor] = useState({backgroundColor: '#25274F'});
     return (
-        <div style={{...color}}>
+        <div style={{height: '100%', width: '100%',...color}}>
             {isBeginning ? <BeginningPage setColor={setColor}/> : <div/>}
             <div onWheel={scrollAction} onTouchStart={touchStart}
                  onTouchEnd={touchEnd}
                  style={{
-                     height: '100vh',
-                     width: '100vw',
+                     height: '100%',
+                     width: '100%',
                      opacity: isBeginning ? 0 : 1,
+                     zIndex:1000,
                  }}>
                 {isJapanese? <JapanesePage/>:<EnglishPage/>}
                 <SectionsPage/>

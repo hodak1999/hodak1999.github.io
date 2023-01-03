@@ -1,8 +1,8 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
-import {FontSizeGenerator} from './FontSizeGenerator';
 import abstractPath from '../../Logos/abstract.png';
-import {FigSizeGenerator} from './FigSizeGenerator';
+import {FigSizeGenerator} from '../../styles/FigSizeGenerator';
+import {FontSizeGenerator} from '../../styles/FontSizeGenerator';
 
 export default function Abstract() {
     const container = {
@@ -29,7 +29,7 @@ export default function Abstract() {
 
     const figContainer = {
         marginTop:'5vh',
-        marginBottom:'5vh',
+        marginBottom:'2vh',
         width: FigSizeGenerator(),
     };
 
