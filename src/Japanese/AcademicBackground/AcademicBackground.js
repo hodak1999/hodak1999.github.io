@@ -1,7 +1,6 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
 import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
-import ConnectionCircles from './ConnectionCircles';
 
 export default function AcademicBackground() {
     const container = {
@@ -61,7 +60,6 @@ export default function AcademicBackground() {
                     </div>
                 </div>
             </div>
-            <ConnectionCircles></ConnectionCircles>
         </div>
     );
 }

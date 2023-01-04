@@ -72,7 +72,6 @@ export default function ResearchBackground() {
                     </div>
                 </div>
             </div>
-            <MountainAnimation></MountainAnimation>
         </div>
     );
 }

@@ -2,16 +2,16 @@ import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
 import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
 import ConnectionCircles
-    from '../../Japanese/AcademicBackground/ConnectionCircles';
+    from '../../Japanese/Contact/ConnectionCircles';
 
 export default function AcademicBackground() {
     const container = {
         position: 'absolute',
         top:'0',
-        left:'0',
+        right:'0vw',
         display:'flex',
         height:'100vh',
-        width:'100vw',
+        width:'60vw',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',

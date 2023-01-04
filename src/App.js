@@ -2,13 +2,16 @@ import './styles.css';
 
 import {useScrollDisplay} from './Providers/DisplayProvider';
 import {useBeginning} from './Providers/BiginningProvider';
-import {useState} from 'react';
+import React, {useState} from 'react';
 import BeginningPage from './Beginning/Beginning';
 import DrawerMenu from './Section/Drawer/DrawerMenu';
 import SectionsPage from './Section/SectionsPage';
 import JapanesePage from './Japanese/JapanesePage';
 import {useLanguage} from './Providers/LanguageProvider';
 import EnglishPage from './English/EnglishPage';
+import ConnectionCircles from './Japanese/Contact/ConnectionCircles';
+import MountainAnimation from './Japanese/ResearchBackground/MountainAnimation';
+import BambooAnimation from './Japanese/AcademicBackground/BambooAnimation';
 
 function App() {
     const {scrollAction, touchStart, touchEnd} = useScrollDisplay();
@@ -29,6 +32,9 @@ function App() {
                 {isJapanese? <JapanesePage/>:<EnglishPage/>}
                 <SectionsPage/>
                 <DrawerMenu/>
+                <ConnectionCircles></ConnectionCircles>
+                <MountainAnimation></MountainAnimation>
+                <BambooAnimation></BambooAnimation>
             </div>
         </div>
     );

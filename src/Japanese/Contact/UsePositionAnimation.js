@@ -3,11 +3,11 @@ import {useSpring} from "@react-spring/web";
 export function usePositionAnimation({cr, r, d, angle, color}, cx, cy, sizeRatio, displayState){
     return useSpring({
     to: {
-        left: displayState === 1 ? `${cx + sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px` : `${cx + 5 * sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px`,
-        top: displayState === 1 ? `${cy - sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px` : `${cy - 5 * sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px`,
+        left: displayState === 3 ? `${cx + sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px` : `${cx + 5 * sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px`,
+        top: displayState === 3 ? `${cy - sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px` : `${cy - 5 * sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px`,
         width: `${sizeRatio * cr}px`,
         height: `${sizeRatio * cr}px`,
-        opacity: displayState === 1 ? 1 : 0
+        opacity: displayState === 3 ? 1 : 0
     },
     config: {
         duration: 1000,

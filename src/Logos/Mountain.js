@@ -2,14 +2,14 @@ import * as React from "react"
 
 const Mountain = () => (
     <svg
-        id="layer_2"
-        data-name="layer 2"
-        xmlns="http://www.w3.org/2000/svg"
+        id="mountain"
+        data-name="mountain_data"
+        xmlns="http://www.w3.org/2002/svg"
         viewBox="0 0 200 143"
         width="100%"
         height="100%"
     >
-        <g id="layer_2_1" data-name="layer 1">
+        <g id="layer_1" data-name="layer 1">
             <path
                 style={{
                     fill: "#aaa",
