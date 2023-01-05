@@ -5,7 +5,7 @@ import {FontSizeGenerator} from './FontSizeGenerator';
 const TITLE_DICT = {
     0:"About Me",
     1:"Education",
-    2:"Research",
+    2:"Publications",
     3:"Contact",
 }
 export default function SectionTitle() {

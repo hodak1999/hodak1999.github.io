@@ -58,7 +58,7 @@ export default function DrawerMenu() {
                 alignItems: "flex-start",
                 opacity:1,
             }}>
-                {["About", "Education", "Research", "Contact"].map((title, index) => {
+                {["About", "Education", "Publications", "Contact"].map((title, index) => {
                     return <animated.div onMouseEnter={onMouseEnter({index: index})}
                                          onMouseLeave={onMouseLeave({index: index})}
                                          style={{...TEXT_STYLE, ...animations[index]}}
