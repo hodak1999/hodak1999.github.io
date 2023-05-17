@@ -25,7 +25,7 @@ export default function DisplayProvider({children}) {
                     setPrevDisplayState(displayState);
                 }
                 setPrevTime(Date.now())
-                console.log(display[0].boxStyle)
+                console.log(display)
             } else if (-20 > e.deltaY) {
                 if (displayState > 0){
                     display[displayState].toggleDisplay();
@@ -43,7 +43,7 @@ export default function DisplayProvider({children}) {
     const skipPage = ({dist}) => () => {
         setPrevDisplayState(displayState);
         setDisplayState(dist);
-        display.map((d, index) => {
+        display.forEach((d, index) => {
             index === dist ? d.handleOpen() : d.handleClose();
         });
         setPrevTime(Date.now());
