@@ -3,6 +3,7 @@ import {useScrollDisplay} from '../../Providers/DisplayProvider';
 import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
 import ConnectionCircles
     from '../../Japanese/Contact/ConnectionCircles';
+import Fade from '../../MainAnimation/Fade';
 
 export default function AcademicBackground() {
     const container = {
@@ -41,9 +42,9 @@ export default function AcademicBackground() {
         fontSize: FontCaptionSizeGenerator(),
     };
 
-    const {display} = useScrollDisplay();
+    const {displayState} = useScrollDisplay();
     return (
-        <div style={display[1].boxStyle}>
+        <Fade show={displayState === 1}>
             <div style={container}>
                 <div style={textContainer}>
                     <div style={textCaptionStyle }>
@@ -61,7 +62,7 @@ export default function AcademicBackground() {
                 </div>
             </div>
             <ConnectionCircles></ConnectionCircles>
-        </div>
+        </Fade>
     );
 }
 

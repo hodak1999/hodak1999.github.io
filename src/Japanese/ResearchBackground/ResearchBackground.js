@@ -1,6 +1,7 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
 import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
+import Fade from '../../MainAnimation/Fade';
 
 export default function ResearchBackground() {
     const container = {
@@ -45,9 +46,10 @@ export default function ResearchBackground() {
         textDecoration: "underline",
     };
 
-    const {display} = useScrollDisplay();
+    const {display, displayState} = useScrollDisplay();
     return (
-        <div style={display[2].boxStyle}>
+        // <div style={display[2].boxStyle}>
+        <Fade show={displayState === 2}>
             <div style={container}>
                 <div style={textContainer}>
                     <div style={textCaptionStyle }>
@@ -77,7 +79,7 @@ export default function ResearchBackground() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Fade>
     );
 }
 

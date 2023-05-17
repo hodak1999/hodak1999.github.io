@@ -1,5 +1,5 @@
 import React, {createContext, useState, useContext} from "react";
-import {useFadeInOutList} from './useFadeInOut';
+// import {useFadeInOutList} from './useFadeInOut';
 
 const screens = 4
 
@@ -9,27 +9,22 @@ export const useScrollDisplay = () => useContext(ScrollDisplayContext);
 export default function DisplayProvider({children}) {
     const [displayState, setDisplayState] = useState(0);
     const [prevDisplayState, setPrevDisplayState] = useState(-1);
-    const display = [...Array(screens).keys()].map(useFadeInOutList);
     const [prevTime, setPrevTime] = useState(0);
     const [prevY, setPrevY] = useState(-1);
 
     const scrollAction = (e) => {
-        if (Date.now() - prevTime > 1000) {
+        if (Date.now() - prevTime > 500) {
             setPrevTime(Date.now())
             if (20 < e.deltaY) {
                 if (displayState < screens-1){
-                    display[displayState].toggleDisplay();
-                    display[displayState+1].toggleDisplay();
                     setPrevDisplayState(displayState);
                     setDisplayState(displayState+1);
                 }else{
                     setPrevDisplayState(displayState);
                 }
-                console.log(display)
+                // console.log(display)
             } else if (-20 > e.deltaY) {
                 if (displayState > 0){
-                    display[displayState].toggleDisplay();
-                    display[displayState-1].toggleDisplay();
                     setPrevDisplayState(displayState);
                     setDisplayState(displayState-1);
                 }else{
@@ -42,9 +37,6 @@ export default function DisplayProvider({children}) {
     const skipPage = ({dist}) => () => {
         setPrevDisplayState(displayState);
         setDisplayState(dist);
-        display.forEach((d, index) => {
-            index === dist ? d.handleOpen() : d.handleClose();
-        });
         setPrevTime(Date.now());
     }
 
@@ -67,7 +59,7 @@ export default function DisplayProvider({children}) {
                 // skipPage,
                 displayState,
                 prevDisplayState,
-                display,
+                // display,
                 scrollAction,
                 touchStart,
                 skipPage,
