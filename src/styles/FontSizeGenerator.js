@@ -5,9 +5,9 @@ export function FontSizeGenerator() {
     if (width < 500) {
         return '10px';
     } else if (width < 900) {
-        return '15px';
+        return '13px';
     } else {
-        return '17px';
+        return '15px';
     }
 }
 

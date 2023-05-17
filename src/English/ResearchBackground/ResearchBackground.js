@@ -63,6 +63,12 @@ export default function ResearchBackground() {
                     <div style={textStyle}>
                         <span style={myNameStyle}>Hodaka Kawachi</span>, Tomoya Nakamura, Yasushi Makihara, and Yasushi Yagi, “Snapshot super-resolution time-of-flight imaging by PSF engineering and untrained deep neural-network prior,” 5th International Workshop on Image Sensors and Imaging Systems (IWISS2022), 5, (Hamamatsu, poster, 2022.12.12). not-reviewed
                     </div>
+                    <div style={textCaptionStyle }>
+                        Journal papers
+                    </div>
+                    <div style={textStyle}>
+                        <span style={myNameStyle}>Hodaka Kawachi</span>, Tomoya Nakamura,　Kazuya Iwata, Yasushi Makihara, and Yasushi Yagi, “Snapshot super-resolution indirect time-of-flight camera using a grating-based subpixel encoder and depth-regularizing compressive reconstruction," Optics Continuum (2023). accepted [Preprint. <a href={"https://doi.org/10.1364/opticaopen.22109660.v1"}> https://doi.org/10.1364/opticaopen.22109660.v1</a>]<br/>
+                    </div>
                 </div>
             </div>
         </div>
