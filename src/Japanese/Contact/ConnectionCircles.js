@@ -1,6 +1,6 @@
 import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
-import {animated, useSpring} from '@react-spring/web';
+import {animated} from '@react-spring/web';
 import {useWindowDimensions} from '../../Providers/WindowSizeProvider';
 import {
     useCircleBoundingAnimation,

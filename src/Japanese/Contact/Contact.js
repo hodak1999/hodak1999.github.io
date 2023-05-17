@@ -5,7 +5,6 @@ import {
     FontCaptionSizeGenerator,
 } from '../../styles/FontSizeGenerator';
 import Atmark from '../../Logos/Atmark';
-import ConnectionCircles from './ConnectionCircles';
 
 export default function Contact() {
     const container = {

@@ -15,6 +15,7 @@ export default function DisplayProvider({children}) {
 
     const scrollAction = (e) => {
         if (Date.now() - prevTime > 1000) {
+            setPrevTime(Date.now())
             if (20 < e.deltaY) {
                 if (displayState < screens-1){
                     display[displayState].toggleDisplay();
@@ -24,7 +25,6 @@ export default function DisplayProvider({children}) {
                 }else{
                     setPrevDisplayState(displayState);
                 }
-                setPrevTime(Date.now())
                 console.log(display)
             } else if (-20 > e.deltaY) {
                 if (displayState > 0){
@@ -35,7 +35,6 @@ export default function DisplayProvider({children}) {
                 }else{
                     setPrevDisplayState(displayState);
                 }
-                setPrevTime(Date.now())
             }
         }
     };

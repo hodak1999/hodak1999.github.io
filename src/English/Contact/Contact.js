@@ -6,7 +6,6 @@ import {
 } from '../../styles/FontSizeGenerator';
 
 import Atmark from '../../Logos/Atmark';
-import ConnectionCircles from '../../Japanese/Contact/ConnectionCircles';
 
 export default function Contact() {
     const container = {
