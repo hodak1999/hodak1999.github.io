@@ -75,7 +75,7 @@ export default function ResearchBackground() {
                         学術論文
                     </div>
                     <div style={textStyle}>
-                        <span style={myNameStyle}>Hodaka Kawachi</span>, Tomoya Nakamura,　Kazuya Iwata, Yasushi Makihara, and Yasushi Yagi, “Snapshot super-resolution indirect time-of-flight camera using a grating-based subpixel encoder and depth-regularizing compressive reconstruction," Optics Continuum, Vol. 2, No. 6, pp. 1368-1383 (2023). [<a href={"https://doi.org/10.1364/OPTCON.487545"}>link</a>]<br/>
+                        <span style={myNameStyle}>Hodaka Kawachi</span>, Tomoya Nakamura,　Kazuya Iwata, Yasushi Makihara, and Yasushi Yagi, “Snapshot super-resolution indirect time-of-flight camera using a grating-based subpixel encoder and depth-regularizing compressive reconstruction," Optics Continuum, Vol. 2, No. 6, pp. 1368-1383 (2023). [<a href={"https://doi.org/10.1364/OPTCON.487545"}>link</a>] <a href={"/TopDownload.pdf"} target="_blank" rel="noopener noreferrer">5月のトップダウンロードに掲載されました.</a><br/>
                     </div>
                 </div>
             </div>
