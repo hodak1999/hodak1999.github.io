@@ -46,7 +46,7 @@ export default function ResearchBackground() {
         textDecoration: "underline",
     };
 
-    const {display, displayState} = useScrollDisplay();
+    const {displayState} = useScrollDisplay();
     return (
         // <div style={display[2].boxStyle}>
         <Fade show={displayState === 2}>
