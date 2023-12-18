@@ -56,12 +56,14 @@ export default function ResearchBackground() {
                         Awards
                     </div>
                     <div style={textStyle}>
+                        JSPS DC1 (2024~)
                         The 25th Meeting on Image Recognition and Understanding(MIRU2022) MIRU学生奨励賞 (2022.7)
                     </div>
                     <div style={textCaptionStyle }>
                         Conferences
                     </div>
                     <div style={textStyle}>
+                        <span style={myNameStyle}>Hodaka Kawachi</span>, Tomoya Nakamura, Kazuya Iwata, Yasushi Makihara, and Yasushi Yagi, “Snapshot super-resolution depth measurement using depth regularization and a diffraction grating,” OSK-OPTICA-OSJ Joint Symposia on Optics 2023, (Jeju, Korea, oral, 2023.8.30). not-reviewed
                         <span style={myNameStyle}>Hodaka Kawachi</span>, Tomoya Nakamura, Yasushi Makihara, and Yasushi Yagi, “Snapshot super-resolution time-of-flight imaging by PSF engineering and untrained deep neural-network prior,” 5th International Workshop on Image Sensors and Imaging Systems (IWISS2022), 5, (Hamamatsu, poster, 2022.12.12). not-reviewed
                     </div>
                     <div style={textCaptionStyle }>

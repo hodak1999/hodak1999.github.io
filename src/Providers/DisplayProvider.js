@@ -1,7 +1,8 @@
 import React, {createContext, useState, useContext} from "react";
+import {DisplayState} from './DisplayState';
 // import {useFadeInOutList} from './useFadeInOut';
 
-const screens = 4
+const screens = Object.keys(DisplayState).length
 
 const ScrollDisplayContext = createContext(undefined);
 export const useScrollDisplay = () => useContext(ScrollDisplayContext);
@@ -11,6 +12,8 @@ export default function DisplayProvider({children}) {
     const [prevDisplayState, setPrevDisplayState] = useState(-1);
     const [prevTime, setPrevTime] = useState(0);
     const [prevY, setPrevY] = useState(-1);
+
+    // 最下部にスクロールされているかをチェックする関数
 
     const scrollAction = (e) => {
         if (Date.now() - prevTime > 500) {
@@ -22,7 +25,7 @@ export default function DisplayProvider({children}) {
                 }else{
                     setPrevDisplayState(displayState);
                 }
-                // console.log(display)
+                console.log(displayState, screens)
             } else if (-20 > e.deltaY) {
                 if (displayState > 0){
                     setPrevDisplayState(displayState);

@@ -2,8 +2,9 @@ import React from 'react';
 import {useScrollDisplay} from '../../Providers/DisplayProvider';
 import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeGenerator';
 import Fade from '../../MainAnimation/Fade';
+import {DisplayState} from '../../Providers/DisplayState';
 
-export default function ResearchBackground() {
+export default function Journals() {
     const container = {
         position: 'absolute',
         top:'0',
@@ -49,28 +50,9 @@ export default function ResearchBackground() {
     const {displayState} = useScrollDisplay();
     return (
         // <div style={display[2].boxStyle}>
-        <Fade show={displayState === 2}>
+        <Fade show={displayState === DisplayState.Journals}>
             <div style={container}>
                 <div style={textContainer}>
-                    <div style={textCaptionStyle }>
-                        受賞
-                    </div>
-                    <div style={textStyle}>
-                        第25回画像の認識・理解シンポジウム(MIRU2022) MIRU学生奨励賞 (2022.7)
-                    </div>
-                    <div style={textCaptionStyle }>
-                        国内発表
-                    </div>
-                    <div style={textStyle}>
-                        1. <span style={myNameStyle}>河内穂高</span>, 中村友哉, 槇原靖, 八木康史, "点像分布関数設計と深度マップ正則化に基づくスナップショット空間超解像ToFセンシング," 第25回画像の認識・理解シンポジウム (MIRU2022), OL4A-1, (姫路, 口頭, 2022.7.27). 評価有り [第25回画像の認識・理解シンポジウム(MIRU2022) MIRU学生奨励賞]<br/>
-                        2. <span style={myNameStyle}>河内穂高</span>, 中村友哉, 槇原靖, 八木康史, "点像分布関数設計と深度マップ正則化に基づくスナップショット空間超解像ToFセンシング," コンピュータビジョンとイメージメディア研究会, (名古屋, ポスター, 2022.5.12). 査読無し
-                    </div>
-                    <div style={textCaptionStyle }>
-                        国際会議
-                    </div>
-                    <div style={textStyle}>
-                        <span style={myNameStyle}>Hodaka Kawachi</span>, Tomoya Nakamura, Yasushi Makihara, and Yasushi Yagi, “Snapshot super-resolution time-of-flight imaging by PSF engineering and untrained deep neural-network prior,” 5th International Workshop on Image Sensors and Imaging Systems (IWISS2022), 5, (Hamamatsu, poster, 2022.12.12). not-reviewed
-                    </div>
                     <div style={textCaptionStyle }>
                         学術論文
                     </div>

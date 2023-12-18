@@ -4,6 +4,7 @@ import abstractPath from '../../Logos/abstract.png';
 import {FigSizeGenerator} from '../../styles/FigSizeGenerator';
 import {FontSizeGenerator} from '../../styles/FontSizeGenerator';
 import Fade from '../../MainAnimation/Fade';
+import {DisplayState} from '../../Providers/DisplayState';
 
 export default function Abstract() {
     const container = {
@@ -50,7 +51,7 @@ export default function Abstract() {
 
     const {displayState} = useScrollDisplay();
     return (
-        <Fade show={displayState === 0}>
+        <Fade show={displayState === DisplayState.Abstract}>
             <div style={container}>
                 <img src={abstractPath} alt={"Logo"} style={figContainer}/>
                 <div style={textContainer}>

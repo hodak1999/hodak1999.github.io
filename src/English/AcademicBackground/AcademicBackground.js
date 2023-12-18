@@ -4,6 +4,7 @@ import {FontSizeGenerator,FontCaptionSizeGenerator} from '../../styles/FontSizeG
 import ConnectionCircles
     from '../../Japanese/Contact/ConnectionCircles';
 import Fade from '../../MainAnimation/Fade';
+import {DisplayState} from '../../Providers/DisplayState';
 
 export default function AcademicBackground() {
     const container = {
@@ -44,7 +45,7 @@ export default function AcademicBackground() {
 
     const {displayState} = useScrollDisplay();
     return (
-        <Fade show={displayState === 1}>
+        <Fade show={displayState === DisplayState.AcademicBackground}>
             <div style={container}>
                 <div style={textContainer}>
                     <div style={textCaptionStyle }>

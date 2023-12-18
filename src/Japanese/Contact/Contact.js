@@ -6,6 +6,7 @@ import {
 } from '../../styles/FontSizeGenerator';
 import Atmark from '../../Logos/Atmark';
 import Fade from '../../MainAnimation/Fade';
+import {DisplayState} from '../../Providers/DisplayState';
 
 export default function Contact() {
     const container = {
@@ -57,7 +58,7 @@ export default function Contact() {
     const {display,displayState} = useScrollDisplay();
     return (
         // <div style={display[3].boxStyle}>
-        <Fade show={displayState === 3}>
+        <Fade show={displayState === DisplayState.Contact}>
             <div style={container}>
                 <div style={textContainer}>
                     <div style={textCaptionStyle}>

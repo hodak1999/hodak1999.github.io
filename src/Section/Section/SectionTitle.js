@@ -5,8 +5,10 @@ import {FontSizeGenerator} from './FontSizeGenerator';
 const TITLE_DICT = {
     0:"About Me",
     1:"Education",
-    2:"Publications",
-    3:"Contact",
+    2:"Awards",
+    3:"Conferences",
+    4:"Journals",
+    5:"Contact",
 }
 export default function SectionTitle() {
     const {displayState} = useScrollDisplay()

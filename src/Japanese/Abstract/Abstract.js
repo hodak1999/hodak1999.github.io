@@ -4,6 +4,7 @@ import {FontSizeGenerator} from '../../styles/FontSizeGenerator';
 import abstractPath from '../../Logos/abstract.png';
 import {FigSizeGenerator} from '../../styles/FigSizeGenerator';
 import Fade from '../../MainAnimation/Fade';
+import {DisplayState} from '../../Providers/DisplayState';
 
 export default function Abstract() {
     const container = {
@@ -48,10 +49,10 @@ export default function Abstract() {
         fontSize: FontSizeGenerator(),
     };
 
-    const {display,displayState} = useScrollDisplay();
+    const {displayState} = useScrollDisplay();
     return (
         // <div style={display[0].boxStyle}>
-        <Fade show={displayState === 0}>
+        <Fade show={displayState === DisplayState.Abstract}>
             <div style={container}>
                 <img src={abstractPath} alt={"Logo"} style={figContainer}/>
                 <div style={textContainer}>

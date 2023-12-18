@@ -2,7 +2,7 @@ import {useWindowDimensions} from '../Providers/WindowSizeProvider';
 
 export function FontSizeGenerator() {
     const {width} = useWindowDimensions();
-    if (width < 500) {
+    if (width < 550) {
         return '10px';
     } else if (width < 900) {
         return '13px';
@@ -13,7 +13,7 @@ export function FontSizeGenerator() {
 
 export function FontCaptionSizeGenerator() {
     const {width} = useWindowDimensions();
-    if (width < 500) {
+    if (width < 550) {
         return '15px';
     } else if (width < 900) {
         return '20px';

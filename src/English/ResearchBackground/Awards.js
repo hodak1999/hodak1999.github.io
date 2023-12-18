@@ -7,14 +7,14 @@ import {
 import Fade from '../../MainAnimation/Fade';
 import {DisplayState} from '../../Providers/DisplayState';
 
-export default function AcademicBackground() {
+export default function Awards() {
     const container = {
         position: 'absolute',
         top: '0',
-        right: '0vw',
+        left: '0',
         display: 'flex',
         height: '100vh',
-        width: '60vw',
+        width: '100vw',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
@@ -32,37 +32,43 @@ export default function AcademicBackground() {
 
     const textStyle = {
         color: '#25274F',
-        fontWeight: 500,
+        fontWeight: 400,
         fontSize: FontSizeGenerator(),
         marginBottom: '1vh',
         marginLeft: 10,
     };
+
     const textCaptionStyle = {
         color: '#25274F',
         fontWeight: 1000,
-        textDecoration: 'underline',
         fontSize: FontCaptionSizeGenerator(),
+        textDecoration: 'underline',
     };
+
+    const Achievement = ({achievements}) =>
+        <div style={textStyle}>
+            {achievements.map((achievement, index) => (
+                <div key={index}>
+                    {index + 1}. {achievement}<br/>
+                </div>
+            ))}
+        </div>;
 
     const {displayState} = useScrollDisplay();
     return (
-        // <div style={display[1].boxStyle}>
-        <Fade show={displayState === DisplayState.AcademicBackground}>
+        <Fade show={displayState === DisplayState.Awards}>
             <div style={container}>
                 <div style={textContainer}>
                     <div style={textCaptionStyle}>
-                        学歴
+                        Awards
                     </div>
-                    <div style={textStyle}>
-                        2011-4 : 京都府京田辺市立大住中学校 入学<br/>
-                        2013-9 : International School Eindhoven (オランダ) 転校<br/>
-                        2015-4 : 京都府立嵯峨野高校 入学<br/>
-                        2018-3 : 京都府立嵯峨野高校 卒業<br/>
-                        2018-4 : 大阪大学基礎工学部情報科学科 入学<br/>
-                        2022-3 : 大阪大学基礎工学部情報科学科 卒業<br/>
-                        2022-4 : 大阪大学 大学院 情報科学研究科 コンピューターサイエンス専攻
-                        博士前期課程 入学
-                    </div>
+
+                    <Achievement achievements={[
+                        'JSPS DC1 (2024~)',
+                        'The 25th Meeting on Image Recognition and Understanding(MIRU2022) MIRU学生奨励賞 (2022.7)',
+                    ]}
+                    />
+
                 </div>
             </div>
         </Fade>

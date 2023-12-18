@@ -1,13 +1,14 @@
 import {useSpring} from "@react-spring/web";
+import {DisplayState} from '../../Providers/DisplayState';
 
 export function usePositionAnimation({cr, r, d, angle, color}, cx, cy, sizeRatio, displayState){
     return useSpring({
     to: {
-        left: displayState === 3 ? `${cx + sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px` : `${cx + 5 * sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px`,
-        top: displayState === 3 ? `${cy - sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px` : `${cy - 5 * sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px`,
+        left: displayState === DisplayState.Contact ? `${cx + sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px` : `${cx + 5 * sizeRatio * r * Math.cos(angle) - sizeRatio * cr / 2}px`,
+        top: displayState === DisplayState.Contact ? `${cy - sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px` : `${cy - 5 * sizeRatio * r * Math.sin(angle) - sizeRatio * cr / 2}px`,
         width: `${sizeRatio * cr}px`,
         height: `${sizeRatio * cr}px`,
-        opacity: displayState === 3 ? 1 : 0
+        opacity: displayState === DisplayState.Contact ? 1 : 0
     },
     config: {
         duration: 1000,
