@@ -65,6 +65,8 @@ export default function Awards() {
                     </div>
 
                     <Achievement achievements={[
+                        '大阪大学 情報科学研究科賞 (2022.3)',
+                        'The 13th Japan-Korea Workshop on Digital Holography and Information Photonics (DHIP2023) Student Presentation Award (2023.12.20)',
                         '日本学術振興会 DC1 採用内定 (2024~)',
                         '第25回画像の認識・理解シンポジウム(MIRU2022) MIRU学生奨励賞 (2022.7)',
                     ]}
