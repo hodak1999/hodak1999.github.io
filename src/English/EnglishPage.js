@@ -8,13 +8,17 @@ import Journals from './ResearchBackground/Journals';
 
 export default function EnglishPage() {
     return (
-        <>
+        <div
+            style={{
+                zIndex: 100,
+            }}
+        >
             <Abstract></Abstract>
             <AcademicBackground></AcademicBackground>
             <Awards></Awards>
             <Conferences></Conferences>
             <Journals></Journals>
             <Contact></Contact>
-        </>
+        </div>
     );
 }

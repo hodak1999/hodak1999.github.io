@@ -25,7 +25,6 @@ export default function DisplayProvider({children}) {
                 }else{
                     setPrevDisplayState(displayState);
                 }
-                console.log(displayState, screens)
             } else if (-20 > e.deltaY) {
                 if (displayState > 0){
                     setPrevDisplayState(displayState);
