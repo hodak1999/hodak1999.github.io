@@ -1,0 +1,6 @@
+.sectionTitle {
+    color: black;
+    font-size: clamp(5px, 5vw, 35px);
+    text-align: left;
+    font-family: "Times New Roman", serif;
+}

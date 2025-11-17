@@ -1,0 +1,76 @@
+/* containerスタイル */
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* textContainerスタイル */
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* leftに対応 */
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+/* figContainerスタイル */
+.figContainer {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    width: clamp(50vw, 55vw, 60vw); /* 動的サイズに置き換え */
+}
+
+/* スマホ向けのスタイル */
+@media (max-width: 768px) {
+    .figContainer {
+        width: 80vw; /* スマホ時は80vwに変更 */
+    }
+}
+
+/* textStyleスタイル */
+.text {
+    color: #25274F;
+    font-weight: 500;
+    font-size: clamp(3px, 2.5vw, 20px); /* FontSizeGenerator の結果をカスタムプロパティに割り当て */
+    margin-bottom: 1vh;
+    margin-left: 10px;
+}
+
+.textGithub {
+    color: #25274F;
+    font-weight: 500;
+    font-size: clamp(3px, 2.5vw, 25px); /* 動的なフォントサイズ */
+    margin-bottom: 1vh;
+    margin-left: 10px;
+    font-family: "Times New Roman", serif;
+    border-bottom: 1px solid #25274F; /* 一括設定 */
+}
+
+.textGithub a {
+    text-decoration: none; /* デフォルトの下線を消す */
+    color: inherit; /* 親の色を継承 */
+}
+
+.textGithub a:hover {
+    border-bottom: 2px solid #007BFF; /* ホバー時のボーダーを強調 */
+    color: #007BFF; /* ホバー時の色変更 */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* なめらかな変化 */
+}
+
+/* textCaptionStyleスタイル */
+.textCaption{
+    color: #25274F;
+    font-weight: 1000;
+    text-decoration: underline;
+    font-size: clamp(5px, 2.5vw, 25px); /* 動的サイズに置き換え */
+}

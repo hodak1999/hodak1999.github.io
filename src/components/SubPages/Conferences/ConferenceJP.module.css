@@ -1,0 +1,121 @@
+/*!* コンテナのスタイル *!*/
+/*.container {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    display: flex;*/
+/*    height: 150vh;*/
+/*    width: 100vw;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*!* テキストコンテナのスタイル *!*/
+/*.textContainer {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: flex-start; !* CSSでは "left" の代わりに "flex-start" を使用 *!*/
+/*    margin-bottom: 5vh;*/
+/*    margin-left: 5vw;*/
+/*    margin-right: 5vw;*/
+/*}*/
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* 背景色はサイトに合わせて調整 */
+    background-color: #FBFBF5;
+    overflow: hidden;  /* 外にはみ出さない */
+}
+
+.viewWindow {
+    position: relative;
+    width: 100vw;       /* 横幅はお好みで */
+    height: 85vh;      /* 20vh〜80vh → 高さ 60vh */
+    margin-top: 10vh;  /* 上から 20vh 開ける */
+    overflow: hidden;
+
+}
+
+/* 上下のフェード（グラデーション） */
+.viewWindow::before,
+.viewWindow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10vh;           /* フェードの厚み（お好みで） */
+    pointer-events: none;   /* クリックなどを邪魔しない */
+    z-index: 2;
+}
+
+/* 上部フェード（上→透明） */
+.viewWindow::before {
+    top: 0;
+    background: linear-gradient(
+        to bottom,
+        #FBFBF5 0%,       /* 背景色 */
+        rgba(251,251,245,0) 100%
+    );
+}
+
+/* 下部フェード（透明→下） */
+.viewWindow::after {
+    bottom: 0;
+    background: linear-gradient(
+        to top,
+        #FBFBF5 0%,       /* 背景色 */
+        rgba(251,251,245,0) 100%
+    );
+}
+
+.scrollWindow {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* 慣性スクロール（そのままでOK） */
+
+    /* ↓↓↓ スクロールバーを消すためのおまじない ↓↓↓ */
+    scrollbar-width: none;    /* Firefox 用 */
+    -ms-overflow-style: none; /* IE / Edge レガシー用 */
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10vh 5vw 10vh;
+}
+
+/* テキストスタイル */
+.textStyle {
+    color: #25274F;
+    font-weight: 400;
+    font-size: clamp(3px, 2.5vw, 20px); /* FontSizeGenerator の結果をカスタムプロパティに割り当て */
+    margin-bottom: 1vh;
+    margin-left: 10px;
+}
+
+/* キャプションテキストのスタイル */
+.textCaptionStyle {
+    color: #25274F;
+    font-weight: 1000;
+    text-decoration: underline;
+    font-size: clamp(5px, 2.5vw, 25px); /* FontCaptionSizeGenerator の結果をカスタムプロパティに割り当て */
+}
+
+.myNameStyle{
+    font-weight:1000;
+    text-decoration: underline;
+}
